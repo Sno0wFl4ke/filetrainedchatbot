@@ -4,7 +4,7 @@ It is a simple chatbot that can be trained on any file and can answer questions 
 
 ## Installation
 ```bash
-pip3 install torch nltk numpy
+> pip3 install torch nltk numpy
 > configure intents.json and profile.json
 > run train.py
 ```
