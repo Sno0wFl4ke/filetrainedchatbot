@@ -14,5 +14,5 @@ Check if training loss is less than ``0.01``. <br>
 
 Run the chatbot using the following command:
 ```bash
-run chat.py
+> run chat.py
 ```
