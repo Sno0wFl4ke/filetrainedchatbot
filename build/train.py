@@ -60,7 +60,7 @@ hidden_size = 8
 output_size = len(tags)
 input_size = len(x_train[0])
 learning_rate = 0.001
-num_epochs = 1000
+num_epochs = 2500
 
 dataset = ChatDataset()
 train_loader = DataLoader(dataset=dataset, batch_size=8, shuffle=True, num_workers=0)
@@ -88,10 +88,10 @@ for epoch in range(num_epochs):
         optimizer.step()
 
     if (epoch + 1) % 100 == 0:
-        print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item():.4f}')
+        print(f'[Training]  Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item():.10f}')
 
 
-print(f'final loss: {loss.item():.4f}')
+print(f'[Training] Final loss: {loss.item():.10f}')
 
 
 """

@@ -76,9 +76,11 @@ def single_chat(sentence) -> str:
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
 
-    if prob.item() > 0.75:
+    if prob.item() > 0.7:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 return f"{bot_name}: {random.choice(intent['responses'])}"
     else:
         return f"{bot_name}: I do not understand..."
+
+run_chat()
