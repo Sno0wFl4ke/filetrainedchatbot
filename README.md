@@ -1,36 +1,44 @@
 # FTCB (FileTrainedChatBot)
-FTCB is a chatbot that is trained on a file. <br>
-It is a simple chatbot that can be trained on any file and can answer questions based on the content of the file. <br>It uses the `nltk` library for natural language processing and `numpy` for numerical operations. Using `pytorch` for training the model. <br>
+
+**FTCB** is a chatbot trained on structured data in `intents.json`. Although it does not read or interpret general file content directly, it leverages training data to respond accurately. Using `nltk` for natural language processing, `numpy` for numerical operations, and `pytorch` for model training, FTCB is built for efficient and targeted interactions.
 
 ## Installation
 
-To make this project work, you need to install the following libraries:
+To install FTCB, you’ll need the following libraries:
 - `torch`
 - `nltk`
 - `numpy`
 
-You can install these libraries using the following command:
+Install these packages with the following commands:
+
 ```bash
 pip3 install torch
 pip3 install nltk
 pip3 install numpy
 ```
 
-After you have installed all libraries, you need to configure the `intents.json` and `profile.json` files.
-- The `intents.json` file contains the training data for the chatbot. 
-- The `profile.json` file contains the profile of the chatbot. 
+After installation, configure the following files:
 
-## Training the chatbot
-Run the train.py file in the /build directory using the following command:
+	•	intents.json: This file holds the training data that FTCB uses for learning.
+	•	profile.json: Contains configuration settings for the chatbot’s profile.
+
+Training the Chatbot
+
+In the /build directory, run the training script:
+
 ```bash
 > python3 train.py
 ```
-Wait until training is finished. <br>
-Check if training loss is less than ``0.01``. If not rerun! <br>
-All set. 
 
+Monitor the training process to ensure the loss is below 0.01. If it isn’t, rerun the training to improve accuracy.
 
-Run the chatbot using the following command in /ui directory:
+Running the Chatbot
+
+To start the chatbot, execute the following command in the /ui directory:
+
 ```bash
 > python3 chat.py
 ```
+
+FTCB is now ready to respond based on the training data provided in intents.json.
+
