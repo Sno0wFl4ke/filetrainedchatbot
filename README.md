@@ -19,10 +19,10 @@ pip3 install numpy
 
 After installation, configure the following files:
 
-	•	intents.json: This file holds the training data that FTCB uses for learning.
-	•	profile.json: Contains configuration settings for the chatbot’s profile.
+- `intents.json`: This file holds the training data that FTCB uses for learning.
+- `profile.json`: Contains configuration settings for the chatbot’s profile.
 
-Training the Chatbot
+### Training the Chatbot
 
 In the /build directory, run the training script:
 
@@ -32,7 +32,7 @@ In the /build directory, run the training script:
 
 Monitor the training process to ensure the loss is below 0.01. If it isn’t, rerun the training to improve accuracy.
 
-Running the Chatbot
+### Running the Chatbot
 
 To start the chatbot, execute the following command in the /ui directory:
 
